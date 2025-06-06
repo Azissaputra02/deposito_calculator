@@ -44,3 +44,67 @@ tenor1 = st.selectbox("📅 Tenor for Bank 1 (months)", sorted(df_rate[df_rate['
 
 bank2 = st.selectbox("🏦 Choose Bank 2", sorted(df_rate['Bank'].unique()), key="bank2")
 tenor2 = st.selectbox("📅 Tenor for Bank 2 (months)", sorted(df_rate[df_rate['Bank'] == bank2]['Tenor'].unique()), key="tenor2")
+
+# --- Deposit Simulation Function ---
+def simulate(principal, rate, tenor_months, tax=0.20):
+    amount = principal
+    monthly_balances = []
+    for month in range(1, 13):
+        if month % tenor_months == 0:
+            gross = amount * (rate / 100) * (tenor_months / 12)
+            net = gross * (1 - tax)
+            amount += net
+        monthly_balances.append(round(amount))
+    return monthly_balances
+
+# --- Get Interest Rates ---
+r1 = df_rate[(df_rate['Bank'] == bank1) & (df_rate['Tenor'] == tenor1)]['Interest'].values[0]
+r2 = df_rate[(df_rate['Bank'] == bank2) & (df_rate['Tenor'] == tenor2)]['Interest'].values[0]
+
+# --- Run Simulations ---
+balances1 = simulate(principal, r1, tenor1)
+balances2 = simulate(principal, r2, tenor2)
+months = [f"{i}-month" for i in range(1, 13)]
+month_nums = list(range(1, 13))
+
+# --- Create Chart Data ---
+df_chart = pd.DataFrame({
+    "Month": months * 2,
+    "MonthNum": month_nums * 2,
+    "Balance": balances1 + balances2,
+    "Product": [f"{bank1} {tenor1}mo"] * 12 + [f"{bank2} {tenor2}mo"] * 12
+})
+
+# --- Color Assignment ---
+color_range = ["#6c5ce7", "#00cec9"] if bank1 != bank2 else ["#6c5ce7", "#81ecec"]
+color_scale = alt.Scale(
+    domain=[f"{bank1} {tenor1}mo", f"{bank2} {tenor2}mo"],
+    range=color_range
+)
+
+# --- Draw Line Chart ---
+chart = alt.Chart(df_chart).mark_line(point=True).encode(
+    x=alt.X('MonthNum:O', title='Month'),
+    y=alt.Y('Balance:Q', title='Balance (Rp)', scale=alt.Scale(zero=False)),
+    color=alt.Color('Product:N', scale=color_scale),
+    tooltip=['Product', 'Month', 'Balance']
+).properties(
+    width=800,
+    height=400,
+    title="📈 Time Deposit Growth Over 12 Months"
+)
+
+st.altair_chart(chart, use_container_width=True)
+
+# --- Summary Table ---
+summary_df = pd.DataFrame({
+    "Product": [f"{bank1} {tenor1}mo", f"{bank2} {tenor2}mo"],
+    "Total Return (Rp)": [balances1[-1] - principal, balances2[-1] - principal],
+    "Total Balance (Rp)": [balances1[-1], balances2[-1]]
+})
+
+summary_df["Total Return (Rp)"] = summary_df["Total Return (Rp)"].map("{:,.0f}".format)
+summary_df["Total Balance (Rp)"] = summary_df["Total Balance (Rp)"].map("{:,.0f}".format)
+
+st.markdown("### 📊 Summary Table")
+st.dataframe(summary_df, use_container_width=True)
