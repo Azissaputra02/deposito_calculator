@@ -127,7 +127,9 @@ if principal > 0:
     )
 
     st.altair_chart(chart, use_container_width=True)
-    # --- Summary Table ---
+else:
+    st.info("💡 Please input your money above to simulate.")
+        # --- Summary Table ---
 summary_data = {
     'Product': [
         'Saving Account',
@@ -152,5 +154,3 @@ df_summary['Total Balance (Rp)'] = df_summary['Total Balance (Rp)'].map('{:,.0f}
 
 st.markdown("### 💼 Summary Table (after 12 months)")
 st.dataframe(df_summary, use_container_width=True)
-else:
-    st.info("💡 Please input your money above to simulate.")
