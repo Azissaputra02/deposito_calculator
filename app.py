@@ -33,3 +33,14 @@ data = {
     'Interest': [...]
 }
 df_rate = pd.DataFrame(data)
+
+# --- Money Input ---
+principal_str = st.text_input("💵 Input your money (Rp)", value="1,000,000")
+principal = int(principal_str.replace(",", "").strip())
+
+# --- Bank & Tenor Selection ---
+bank1 = st.selectbox("🏦 Choose Bank 1", sorted(df_rate['Bank'].unique()), key="bank1")
+tenor1 = st.selectbox("📅 Tenor for Bank 1 (months)", sorted(df_rate[df_rate['Bank'] == bank1]['Tenor'].unique()), key="tenor1")
+
+bank2 = st.selectbox("🏦 Choose Bank 2", sorted(df_rate['Bank'].unique()), key="bank2")
+tenor2 = st.selectbox("📅 Tenor for Bank 2 (months)", sorted(df_rate[df_rate['Bank'] == bank2]['Tenor'].unique()), key="tenor2")
