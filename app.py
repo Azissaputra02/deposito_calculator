@@ -11,7 +11,7 @@ def go_to(page_name):
 
 # --- Sidebar navigasi ---
 with st.sidebar:
-    st.markdown("## 📚 Navigation")
+    st.markdown("##  List of content")
     page = st.radio(
         "Go to:",
         ("Home", "Planning", "Expense", "Result", "Glossary"),
