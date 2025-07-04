@@ -72,25 +72,6 @@ if st.session_state.page == "Home":
             st.markdown("- **Adinda Salsabila** – Result Analyst")
 
     st.divider()
-    st.markdown("### 🔎 Quick Access")
-
-    # Styling tombol
-    st.markdown("""
-        <style>
-        .quick-button button {
-            padding: 0.5em 1.2em;
-            font-weight: bold;
-            border-radius: 6px;
-            background-color: #f39c12;
-            color: white;
-            border: none;
-        }
-        .quick-button button:hover {
-            background-color: #e67e22;
-        }
-        </style>
-    """, unsafe_allow_html=True)
-
     # Tampilan tombol navigasi sejajar
     st.markdown("### 🔎 Quick Access")
     with st.expander("🗂️ Planning"):
