@@ -7,7 +7,7 @@ st.title("Financial Planning Team - Danamon")
 st.markdown("Welcome to the **Financial Planning Team** page. Click on each leader to explore their team members.")
 
 # Display Financial Planning Head
-st.markdown("### Erwinda Wijaya")
+st.markdown("## Erwinda Wijaya")
 st.caption("Financial Planning Head")
 
 # Display Leads in Columns
