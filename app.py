@@ -57,7 +57,7 @@ if st.session_state.page == "Home":
             st.markdown("- **Adinda Salsabila** – Result Analyst")
 
     st.divider()
-    st.markdown("### 🔎 Quick Access to Sections")
+    st.markdown("### Quick Access to Sections")
 
     col1, col2, col3, col4 = st.columns(4)
 
