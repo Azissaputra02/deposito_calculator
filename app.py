@@ -41,7 +41,7 @@ if st.session_state.page == "Home":
     st.header("Erwinda Wijaya")
     st.caption("Financial Planning Head")
 
-# Display Leads in Columns
+    # Display Leads in Columns
     col1, col2, col3 = st.columns(3)
 
     with col1:
