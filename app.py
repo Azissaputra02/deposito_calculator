@@ -38,8 +38,10 @@ if st.session_state.page == "Home":
     st.markdown("Welcome to the Financial Planning Knowledge Center — this is where strategic and financial planning insights are built and shared across the bank. Tap on each leader to see their team members.")
 
     # Display Financial Planning Head
+    st.markdown("---")
     st.header("Erwinda Wijaya")
     st.caption("Financial Planning Head")
+    st.markdown("---")
 
     # Display Leads in Columns
     col1, col2, col3 = st.columns(3)
