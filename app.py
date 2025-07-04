@@ -31,7 +31,7 @@ if st.session_state.page == "Home":
         text-align: left;
         margin-top: -20px;
     ">
-    Financial Planning
+    FP Knowledge Center
     </h1>
     """, unsafe_allow_html=True)
 
