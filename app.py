@@ -91,24 +91,7 @@ if st.session_state.page == "Home":
         </style>
     """, unsafe_allow_html=True)
 
-    # # Tampilan tombol navigasi sejajar
-    # col1, col2, col3, col4 = st.columns(4)
-    # with col1:
-    #     with st.container():
-    #         if st.button("📘 Glossary", key="glossary_btn"):
-    #             go_to("Glossary")
-    # with col2:
-    #     with st.container():
-    #         if st.button("🗂️ Planning", key="planning_btn"):
-    #             go_to("Planning")
-    # with col3:
-    #     with st.container():
-    #         if st.button("💸 Expense", key="expense_btn"):
-    #             go_to("Expense")
-    # with col4:
-    #     with st.container():
-    #         if st.button("📊 Result", key="result_btn"):
-    #             go_to("Result")
+    # Tampilan tombol navigasi sejajar
     st.markdown("### 🔎 Quick Access")
     with st.expander("🗂️ Planning"):
         st.markdown("""
