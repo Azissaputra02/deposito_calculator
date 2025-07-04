@@ -105,7 +105,7 @@ if st.session_state.page == "Home":
 
 # --- Halaman Planning ---
 elif st.session_state.page == "Planning":
-    if st.button("🔙 Back to Home"):
+    if st.button("🔙 "):
         go_to("Home")
     st.header("🗂️ Planning")
     st.markdown("Content for Planning goes here...")
