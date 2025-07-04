@@ -91,24 +91,56 @@ if st.session_state.page == "Home":
         </style>
     """, unsafe_allow_html=True)
 
-    # Tampilan tombol navigasi sejajar
-    col1, col2, col3, col4 = st.columns(4)
-    with col1:
-        with st.container():
-            if st.button("📘 Glossary", key="glossary_btn"):
-                go_to("Glossary")
-    with col2:
-        with st.container():
-            if st.button("🗂️ Planning", key="planning_btn"):
-                go_to("Planning")
-    with col3:
-        with st.container():
-            if st.button("💸 Expense", key="expense_btn"):
-                go_to("Expense")
-    with col4:
-        with st.container():
-            if st.button("📊 Result", key="result_btn"):
-                go_to("Result")
+    # # Tampilan tombol navigasi sejajar
+    # col1, col2, col3, col4 = st.columns(4)
+    # with col1:
+    #     with st.container():
+    #         if st.button("📘 Glossary", key="glossary_btn"):
+    #             go_to("Glossary")
+    # with col2:
+    #     with st.container():
+    #         if st.button("🗂️ Planning", key="planning_btn"):
+    #             go_to("Planning")
+    # with col3:
+    #     with st.container():
+    #         if st.button("💸 Expense", key="expense_btn"):
+    #             go_to("Expense")
+    # with col4:
+    #     with st.container():
+    #         if st.button("📊 Result", key="result_btn"):
+    #             go_to("Result")
+    st.markdown("### 🔎 Quick Access")
+    with st.expander("🗂️ Planning"):
+        st.markdown("""
+        Financial planning ensures the bank's goals are aligned with budget forecasts,  
+        key initiatives, and projected performance.
+        """)
+        if st.button("Read more →", key="go_planning"):
+            go_to("Planning")
+
+    with st.expander("💸 Expense"):
+        st.markdown("""
+        Expense management controls and monitors the cost-effectiveness of every initiative.  
+        Provides timely insight on budget utilization across departments.
+        """)
+        if st.button("Read more →", key="go_expense"):
+            go_to("Expense")
+
+    with st.expander("📊 Result"):
+        st.markdown("""
+        Result tracking evaluates actual financial outcomes against plan and target KPIs.  
+        Supports decision-making with monthly analytics and forecasts.
+        """)
+        if st.button("Read more →", key="go_result"):
+            go_to("Result")
+
+    with st.expander("📘 Glossary"):
+        st.markdown("""
+        All the key financial terms, acronyms, and concepts used within Financial Planning  
+        — in one place for your quick reference.
+        """)
+        if st.button("Read more →", key="go_glossary"):
+            go_to("Glossary")
 
 # --- Halaman Planning ---
 elif st.session_state.page == "Planning":
