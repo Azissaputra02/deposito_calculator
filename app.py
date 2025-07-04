@@ -119,21 +119,21 @@ elif st.session_state.page == "Planning":
 
 # --- Halaman Expense ---
 elif st.session_state.page == "Expense":
-    if st.button("🔙 Back to Home"):
+    if st.button("🔙 "):
         go_to("Home")
     st.header("💸 Expense")
     st.markdown("Content for Expense goes here...")
 
 # --- Halaman Result ---
 elif st.session_state.page == "Result":
-    if st.button("🔙 Back to Home"):
+    if st.button("🔙 "):
         go_to("Home")
     st.header("📊 Result")
     st.markdown("Content for Result goes here...")
 
 # --- Halaman Glossary ---
 elif st.session_state.page == "Glossary":
-    if st.button("🔙 Back to Home"):
+    if st.button("🔙 "):
         go_to("Home")
     st.header("📘 Glossary")
     st.markdown("Content for Glossary goes here...")
