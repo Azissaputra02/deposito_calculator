@@ -36,3 +36,35 @@ if st.session_state.page == "Home":
     """, unsafe_allow_html=True)
 
     st.markdown("Welcome to the Financial Planning Knowledge Center — this is where strategic and financial planning insights are built and shared across the bank. Tap on each leader to see their team members.")
+
+    # Display Financial Planning Head
+    st.header("Erwinda Wijaya")
+    st.caption("Financial Planning Head")
+
+# Display Leads in Columns
+    st.subheader("Team Leads")
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.markdown("### Maria Febiana Basuki")
+        st.caption("Planning Lead")
+        with st.expander("View Team Members"):
+            st.markdown("- **Albert Davin** – Senior Planning Analyst")
+            st.markdown("- **Melfin Tanzil** – Planning Analyst")
+            st.markdown("- **Visakha Viriya** – Planning Analyst")
+
+    with col2:
+        st.markdown("### Harvey Rustandi")
+        st.caption("Project & Expense Management Lead")
+        with st.expander("View Team Members"):
+            st.markdown("- **Novara Martina** – Senior Project & Expense Analyst")
+            st.markdown("- **Yudi Hadisaputra** – Project & Expense Analyst")
+            st.markdown("- **Zefanya Sharon Iswanto** – Project & Expense Analyst")
+
+    with col3:
+        st.markdown("### Yansen Taman")
+        st.caption("Result Lead")
+        with st.expander("View Team Members"):
+            st.markdown("- **Cindy Uly Napitupulu** – Senior Result Analyst")
+            st.markdown("- **Imam Sagita** – Result Analyst")
+            st.markdown("- **Adinda Salsabila** – Result Analyst")
