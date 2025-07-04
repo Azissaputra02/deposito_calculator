@@ -76,15 +76,14 @@ if st.session_state.page == "Home":
     st.markdown("### Explore")
     with st.expander("🗂️ Planning"):
         st.markdown("""
-        coordinate and consolidate Bank-wide Financial Planning & Strategy in collaboration with CSO team.
+        Initiated, coordinate and consolidate Bank-wide Financial Planning & Strategy in collaboration with CSO team.
         """)
         if st.button("Read more →", key="go_planning"):
             go_to("Planning")
 
     with st.expander("💸 Expense"):
         st.markdown("""
-        Expense management controls and monitors the cost-effectiveness of every initiative.  
-        Provides timely insight on budget utilization across departments.
+        Initiated, coordinate and consolidate Bank-wide OPEX and CAPEX Planning & Budgeting. 
         """)
         if st.button("Read more →", key="go_expense"):
             go_to("Expense")
