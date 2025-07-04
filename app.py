@@ -73,7 +73,7 @@ if st.session_state.page == "Home":
 
     st.divider()
     # Tampilan tombol navigasi sejajar
-    st.markdown("### 🔎 Quick Access")
+    st.markdown("### Explore")
     with st.expander("🗂️ Planning"):
         st.markdown("""
         Financial planning ensures the bank's goals are aligned with budget forecasts,  
