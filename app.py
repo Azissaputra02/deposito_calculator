@@ -34,3 +34,5 @@ if st.session_state.page == "Home":
     Financial Planning
     </h1>
     """, unsafe_allow_html=True)
+
+    st.markdown("Welcome to the **Financial Planning Team**, with the roles: providing bank-wide strategy and financial planning insights. Click on each leader to explore their team members.")
