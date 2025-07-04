@@ -36,8 +36,7 @@ if st.session_state.page == "Home":
     """, unsafe_allow_html=True)
 
     st.markdown("""
-    Welcome to the Financial Planning Knowledge Center — here’s where strategic and financial planning insights across the bank are made.  
-    Tap on each leader to see their team members.
+    Welcome to the Financial Planning Knowledge Center — here’s where strategic and financial planning insights across the bank are made. Tap on each leader to see their team members.
     """)
 
     st.divider()
