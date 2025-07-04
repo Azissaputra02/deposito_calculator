@@ -76,8 +76,7 @@ if st.session_state.page == "Home":
     st.markdown("### Explore")
     with st.expander("🗂️ Planning"):
         st.markdown("""
-        Financial planning ensures the bank's goals are aligned with budget forecasts,  
-        key initiatives, and projected performance.
+        coordinate and consolidate Bank-wide Financial Planning & Strategy in collaboration with CSO team.
         """)
         if st.button("Read more →", key="go_planning"):
             go_to("Planning")
