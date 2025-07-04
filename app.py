@@ -2,7 +2,22 @@ import streamlit as st
 
 st.set_page_config(page_title="Danamon Financial Planning Team", layout="wide")
 
-st.title("Financial Planning Team - Danamon")
+# st.title("Financial Planning Team - Danamon")
+
+# --- Title ---
+st.markdown("""
+<h1 style="
+    font-size: 3em;
+    font-weight: 900;
+    background: linear-gradient(to right, #f39c12, #f1c40f, #e67e22);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: left;
+    margin-top: -20px;
+">
+Financial Planning
+</h1>
+""", unsafe_allow_html=True)
 
 st.markdown("Welcome to the **Financial Planning Team** page. Click on each leader to explore their team members.")
 
