@@ -11,11 +11,11 @@ def go_to(page_name):
 
 # Sidebar navigasi
 with st.sidebar:
-    st.markdown("## Navigasi SOP")
+    st.markdown("## List of content")
     page = st.radio(
-        "Pilih Halaman:",
-        ("Home", "HCSP", "Benefit", "Payroll"),
-        index=("Home", "HCSP", "Benefit", "Payroll").index(st.session_state.page)
+        "Select:",
+        ("Home", "Glossary", "Planning", "Expense", "Result"),
+        index=("Home", "Glossary", "Planning", "Expense", "Result").index(st.session_state.page)
     )
     st.session_state.page = page
 
