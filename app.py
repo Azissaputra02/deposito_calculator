@@ -25,7 +25,7 @@ if st.session_state.page == "Home":
     <h1 style="
         font-size: 3em;
         font-weight: 900;
-        background: linear-gradient(to right, #0A5038, #ED5626, #FEBF25);
+        background: linear-gradient(to right, #ED5626, #ED5626, #FEBF25);
         -webkit-background-clip: text;
         color: transparent;
         text-align: left;
