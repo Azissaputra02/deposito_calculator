@@ -35,4 +35,4 @@ if st.session_state.page == "Home":
     </h1>
     """, unsafe_allow_html=True)
 
-    st.markdown("Welcome to the **Financial Planning Knowledge Center**, with the roles: providing bank-wide strategy and financial planning insights. Click on each leader to explore their team members.")
+    st.markdown("Welcome to the Financial Planning Knowledge Center — this is where strategic and financial planning insights are built and shared across the bank. Tap on each leader to see their team members.")
