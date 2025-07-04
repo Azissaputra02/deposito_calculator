@@ -90,8 +90,7 @@ if st.session_state.page == "Home":
 
     with st.expander("📊 Result"):
         st.markdown("""
-        Result tracking evaluates actual financial outcomes against plan and target KPIs.  
-        Supports decision-making with monthly analytics and forecasts.
+        Provide Bank-wide Performance Result Report to BODM, BOC, and DQUM on monthly and quarterly basis including analysis and feedback action needed.
         """)
         if st.button("Read more →", key="go_result"):
             go_to("Result")
