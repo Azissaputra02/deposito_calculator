@@ -42,7 +42,6 @@ if st.session_state.page == "Home":
     st.caption("Financial Planning Head")
 
 # Display Leads in Columns
-    st.subheader("Team Leads")
     col1, col2, col3 = st.columns(3)
 
     with col1:
