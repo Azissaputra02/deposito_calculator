@@ -43,13 +43,13 @@ if st.session_state.page == "Home":
     st.divider()
 
     # Tampilan struktur organisasi
-    st.header("👤 Erwinda Wijaya")
+    st.header(" Erwinda Wijaya")
     st.caption("Financial Planning Head")
 
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.markdown("### Maria Febiana Basuki")
+        st.markdown("### Maria Febiana B")
         st.caption("Planning Lead")
         with st.expander("View Team Members"):
             st.markdown("- **Albert Davin** – Senior Planning Analyst")
