@@ -41,7 +41,6 @@ if st.session_state.page == "Home":
     st.markdown("---")
     st.header("Erwinda Wijaya")
     st.caption("Financial Planning Head")
-    st.markdown("---")
 
     # Display Leads in Columns
     col1, col2, col3 = st.columns(3)
